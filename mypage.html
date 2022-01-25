@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skellefteå kommun färdtjänst">
+    <link rel="stylesheet" href="styles.css">
+    <!--Faviconer-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/95698cec21.js" crossorigin="anonymous"></script>
+    <title>Skellefteå kommun - Färdtjänst</title>
+</head>
+
+<body>
+    <!--Knapp som är gömd där användaren kan hoppa till huvudinnehåll. Syns med tab-->
+    <a class="skip-to-main" href="#main-mypage">Gå till huvudinnehållet</a>
+    <header>
+        <!--Här startar hamburger-menyn-->
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-wrapper">
+                <!--Logotypen-->
+                <a href="index.html"><img class="logo" id="logo" src="images/logo.svg" alt="logotyp"></a>
+                <!-- Sökruta-->
+                <form role="search">
+                    <div class="search" id="search">
+                        <input type="text" placeholder="Sök" class="search-bar" id="search-desktop" aria-label="Sök">
+                        <button type="submit" class="searchButton" value="search" title="sök">
+                            <i class="fa fa-search"> Sök</i>
+                        </button>
+                    </div>
+                </form>
+
+                <!--Mina sidor-länk(Stylad som knapp)-->
+                <div class="mypage-btn"> <a href="mypage.html" aria-label="mina sidor"><i class="fas fa-user fa-sm"></i>
+                        Mina sidor</a> </div>
+
+
+                <!--Hamburger-ikonen. Span-texten syns endast för större skärmar-->
+                <button class="hamburger-icon" id="hamburger-icon" value="menu" aria-label="meny"><i
+                        class="fas fa-bars"></i><span class="hamburger-text">Meny</span></button>
+
+                <!--Meny-->
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a class="active-link" href="index.html">
+                            Mina sidor
+                        </a></li>
+                    <li><a href="book.html">Boka färdtjänst</a></li>
+                    <li><a href="about.html">Om färdtjänst</a></li>
+                    <li><a href="contact.html">Kontakta oss</a></li>
+                    <li><a href="accesibility.html">Tillgänglighetsredogörelse</a></li>
+                    <li><a href="index.html"> <i class="fas fa-sign-out-alt"></i> Logga ut</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Här slutar header och main börjar-->
+    <main id="main-mypage">
+        <!--Breadcrumbs-->
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Startsida ></a></li>
+            <li><strong> Mina sidor</strong></li>
+        </ul>
+
+        <!--Sektion 1-->
+        <section id="mypage">
+
+            <h1>Mina sidor</h1>
+            <div class="mypage-flex">
+                <div>
+                    <!--Expanderande knapp med wai-aria-->
+                    <button type="button" class="collaps-btn" id="mypage-button2" aria-expanded="false"
+                        aria-controls="sect5">Mina kontaktuppgifter <i class="fas fa-chevron-down arrow"
+                            aria-live="polite"></i></button>
+                    <article class="collaps-article" id="sect5" role="region">
+                        <h2>Användare:</h2>
+                        <p>Emma Forslund <br> 1995 - 07 - 26 - ****</p>
+                        <h3>
+                            Adress:
+                        </h3>
+                        <p>Hagelstigen 29 <br> 19151 Skellefteå</p>
+                        <h3>Mail:</h3>
+                        <p>Emma.forslund@student.miun.se</p>
+                        <h3>Telefon:</h3>
+                        <p>076 - 101 ** **</p>
+                    </article>
+                </div>
+
+
+                <!--Mina bokningar-->
+
+                <div>
+                    <!--Expanderande knapp med wai-aria-->
+                    <button type="button" class="collaps-btn" id="mypage-button" aria-expanded="false"
+                        aria-controls="sect6">Mina resor <i class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article" id="sect6" role="region" aria-live="polite">
+                        <!--Min nästa resa-->
+                        <h2>Min nästa resa</h2>
+                        <h3>Fredag, 17 december 2021</h3>
+                        <p>Enkelresa<br>
+                            14:15 - Hagelstigen 29<br>
+                            14:45 - Skelleftehamnsvägen 3
+                            <br>Bokningsnummer: RPOQ21
+                        </p>
+
+                        <!--Knapp för avboka och omboka-->
+                        <div class="mypage-buttons">
+                            <button class="change-btn" id="change1">Ändra resa <i class="fas fa-pen"></i></button>
+                            <div class="change-div">
+                                <!--Kontaktformulär för att ändra resa-->
+                                <form>
+                                    <h3 class="change-h3">Ändra resa</h3>
+                                    <!--Från-->
+                                    <label for="trip-from">Jag vill resa från: </label><br>
+                                    <input type="text" id="trip-from" placeholder="Fyll i startadress"><br><br>
+
+
+                                    <!--Tid och datum-->
+                                    <label for="trip-time2">Välj datum och tid </label><br>
+                                    <input type="datetime-local" id="trip-time2" name="trip-time2"><br><br><br>
+
+
+                                    <!--Till-->
+                                    <label for="trip-to3">Jag vill resa till: </label><br>
+                                    <input type="text" id="trip-to3" placeholder="Fyll i slutdestination"><br><br>
+
+                                    <label for="time-home3">Välj tid för hemresa:</label>
+                                    <br><input type="time" id="time-home3" name="time-home3" min="00:00"
+                                        max="23:59"><br>
+                                    <button class="change-trip-btn" onclick="changeAlert()">Spara ändringar</button>
+
+                                </form>
+                            </div><br>
+
+                            <button class="unbook-btn" id="unbook1" aria-controls="sect8" aria-expanded="false">Avboka
+                                <i class="fas fa-times"></i></button>
+                            <div class="unbook-div" id="sect8" role="region">
+                                <p>Är du säker på att du vill avboka?</p>
+                                <!--Knapp för att avboka. Anropar funktion vid klick-->
+                                <button class="unbook-trip-btn" onclick="unbookClicked()">Avboka</button><br>
+                            </div>
+                        </div>
+                        <hr>
+
+
+
+                        <!--Mina återkommande resor-->
+                        <article>
+                            <h2>Mina återkommande resor</h2>
+                            <h3>Måndagar, varje vecka</h3>
+                            <p>14:00 - Hagelstigen 29<br>
+                                14:30 - Älvsbackavägen 5</p>
+                            <h4 class="article-h4">Returresa:</h4>
+                            <p>15:45 - Älvbackavägen 516<br>
+                                15:00 - Hagelstigen 29<br>
+                                Bokningsnummer: RPOQ23</p>
+                            <!--Knapp för avboka och omboka-->
+                            <div class="mypage-buttons">
+                                <button class="change-btn" id="change2">Ändra resa <i class="fas fa-pen"></i></button>
+                                <div class="change-div">
+                                    <!--Kontaktformulär för att ändra resa-->
+                                    <form>
+                                        <h3 class="change-h3">Ändra resa</h3>
+                                        <!--Från-->
+                                        <label for="start1">Jag vill resa från: </label><br>
+                                        <input type="text" id="start1" placeholder="Fyll i startadress"><br><br>
+
+
+                                        <!--Tid och datum-->
+                                        <label for="trip-time3">Välj datum och tid: </label><br>
+                                        <input type="datetime-local" id="trip-time3" name="trip-time3"><br><br><br>
+
+
+                                        <!--Till-->
+                                        <label for="trip-to">Jag vill resa till: </label><br>
+                                        <input type="text" id="trip-to" placeholder="Fyll i slutdestination"><br><br>
+
+                                        <label for="time-home1">Välj tid för hemresa:</label>
+                                        <br><input type="time" id="time-home1" name="time-home1" min="00:00"
+                                            max="23:59"><br>
+                                        <button class="change-trip-btn" onclick="changeAlert()">Spara ändringar</button>
+
+                                    </form>
+                                </div>
+                                <!--Avboka-knapp med wai-aria-->
+                                <button class="unbook-btn" id="unbook2" aria-controls="sect9"
+                                    aria-expanded="false">Avboka <i class="fas fa-times"></i></button>
+                                <div class="unbook-div" id="sect9" role="region" aria-live="polite">
+                                    <p>Är du säker på att du vill avboka?</p>
+                                    <!--Knapp för att avboka. Anropar funktion vid klick-->
+                                    <button class="unbook-trip-btn" onclick="unbookClicked()">Avboka</button><br>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <!--Nästa resa-->
+                        <article>
+                            <h3>Torsdagar, varje vecka</h3>
+                            <p>09:00 - Hagelstigen 29<br>
+                                09:30 - Sunnanåvägen 30</p>
+                            <h4 class="article-h4">Returresa:</h4>
+                            <p>11:00 - Sunnanåvägen 30<br>
+                                11:30 - Hagelstigen 29
+                                <br>Bokningsnummer: RPOQ22
+                            </p>
+                            <!--Knapp för avboka och omboka-->
+                            <div class="mypage-buttons">
+                                <button class="change-btn" id="change3">Ändra resa <i class="fas fa-pen"></i></button>
+                                <div class="change-div">
+                                    <form>
+                                        <h3 class="change-h3">Ändra resa</h3>
+                                        <!--Från-->
+                                        <label for="trip-from2">Jag vill resa från: </label><br>
+                                        <input type="text" id="trip-from2" placeholder="Fyll i startadress"><br><br>
+
+
+                                        <!--Tid och datum-->
+                                        <label for="trip-time4">Välj datum och tid </label><br>
+                                        <input type="datetime-local" id="trip-time4" name="meeting-time4"><br><br><br>
+
+
+                                        <!--Till-->
+                                        <label for="trip-to2">Jag vill resa till: </label><br>
+                                        <input type="text" id="trip-to2" placeholder="Fyll i slutdestination"><br><br>
+
+                                        <label for="time-home2">Välj tid för hemresa:</label>
+                                        <br><input type="time" id="time-home2" name="time-home" min="00:00"
+                                            max="23:59"><br>
+                                        <button class="change-trip-btn" onclick="changeAlert()">Spara ändringar</button>
+
+                                    </form>
+                                </div>
+                                <!--Avboka-knapp med wai-aria-->
+                                <button class="unbook-btn" id="unbook3" aria-controls="sect10"
+                                    aria-expanded="false">Avboka <i class="fas fa-times"></i></button>
+                                <div class="unbook-div" id="sect10" role="region" aria-live="polite">
+                                    <p>Är du säker på att du vill avboka?</p>
+                                    <!--Knapp för att avboka. Anropar funktion vid klick-->
+                                    <button class="unbook-trip-btn" onclick="unbookClicked()">Avboka</button><br>
+                                </div>
+                            </div>
+                        </article>
+                    </article>
+                </div>
+            </div>
+
+
+
+        </section>
+    </main>
+    <!--Footer-->
+    <footer class="main-footer">
+        <div>
+            <h3>Kontakta oss</h3>
+            <p>Kundtjänst: 0910 73 50 00<br>Mail: emfo2102@student.miun.se<br><br></p>
+            <a href="contact.html">Skicka meddelande direkt på webbplatsen</a>
+        </div>
+        <div>
+            <h3>Länkar</h3>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="mypage.html">Mina sidor</a></li>
+                <li><a href="book.html">Boka färdtjänst</a></li>
+                <li><a href="about.html">Om färdtjänst</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tillgänglighet</h3>
+            <a href="accesibility.html">Tillgänglighetsredogörelse</a>
+        </div>
+        <div class="backtotop"><a href="#logo">Tillbaka till toppen av sidan</a></div>
+    </footer>
+    <footer class="secondFooter"><span>Emma Forslund. emfo2102@student.miun.se</span></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

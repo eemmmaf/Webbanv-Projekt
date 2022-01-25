@@ -1,0 +1,1108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10 pixlar*/
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    max-width: 1140px;
+    width:100%;
+    margin-bottom:2rem;
+    /*Maxbredd för main*/
+}
+
+h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    line-height:1.8;
+}
+
+h2 {
+    font-size: 2.6rem;
+    line-height: 1.6;
+}
+h3 {
+    font-size:2.2rem;
+    line-height:1.6;
+}
+
+h4{
+    font-size: 2.0rem;
+    line-height:1.8;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top:0.5rem;
+}
+
+p {
+    font-size: 1.6rem;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    line-height: 1.6;
+    max-width:500px; /*Ställer in maxbredd för paragrafer*/
+    width:100%; 
+}
+
+li {
+    font-size: 1.6rem;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    line-height: 1.8;
+}
+
+a{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size:1.6rem;
+    line-height: 1.6;
+    color:black;
+}
+
+a:hover{
+    font-weight: bold;
+}
+.active-link{
+    font-weight:bold;
+    font-size:2.4rem;
+}
+
+a:active{
+    font-weight: bold;
+}
+
+button{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 1.6em;
+    border:none;
+    box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.5);
+    cursor:pointer;
+}
+.logo{
+    max-width:50%;
+}
+
+/*Hamburger-menyn*/
+.hamburger-menu {
+    background-color: #004165;
+    padding: 1rem;
+}
+/*Ikonen*/
+.hamburger-icon {
+    background-color:transparent;
+    box-shadow: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.3rem;
+    font-size:2rem;
+    padding: 1rem;
+}
+/*Texten som endast syns vid större skärmar*/
+.hamburger-text{
+    display:none;
+}
+
+/*Menyn med länkarna som är gömda innan man trycker på hamburger-ikonen*/
+.nav-ul {
+    display: none;
+    width: 100%;
+    padding-left: 0;
+    background-color: #005A8B;
+    list-style-type: none;
+}
+/*Länkarna när dom syns*/
+.nav-ul.show {
+    display: block;
+}
+
+nav a {
+    text-decoration: none;
+    line-height: 2;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+nav li {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+/*Svart ram runt länkar och input-fält*/
+a:focus, input:focus {border: solid black 3px}
+
+/*Maxbredd på innehållet i menyn*/
+.menu-wrapper{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    display: block;
+}
+
+/*Knappen för mina sidor i menyn*/
+.mypage-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 5.5rem;
+    background-color: #005A8B;
+    color: white;
+    font-size: 1.4rem;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    padding: 0.5rem;
+    text-align: center;
+    max-width:388px;
+    border:none;
+    box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.5);
+}
+
+.mypage-btn > a{
+    font-size:1.4rem;
+}
+
+
+
+/*Sökruta*/
+.search {
+    max-width: 90vw;
+    position: relative;
+    display: flex;
+    margin: 1.5rem auto auto auto;
+    box-shadow: 1px 2px 5px 0.5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #004165;
+}
+
+.search input {
+    width: 70vw;
+    border-right: none;
+    padding: 0.9rem;
+    border: none;
+}
+
+.search i {
+    color: white;
+}
+
+.searchButton {
+    width: 20vw;
+    border: none;
+    background-color: #005A8B;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+/*Startsidan*/
+#indexContainer h1 {
+    background-color: #90326E;
+    color: white;
+    padding: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    width:100%;
+}
+
+#indexText {
+    background-color: white;
+    color: black;
+    padding:2rem;
+    margin:0 auto;
+    max-width:500px;
+}
+
+#indexBoxes {
+    padding:3%;
+}
+
+#indexBoxes article{
+background-color: #E5EEF3;
+padding:1rem 3rem 2rem 1.5rem;
+margin-bottom:2rem;
+box-shadow: 1px 2px 5px 0.5px rgba(0, 0, 0, 0.5);
+max-width:500px;
+width:100%;
+}
+
+#indexBoxes a{
+    color:black;
+    font-size:1.6rem;
+    margin-left:0.5rem;
+}
+
+#indexBoxes a:hover{
+    font-weight:bold;
+}
+
+/*Frågor startsida*/
+#index-qa{
+    background-color: #E5EEF3;
+    padding:1% 0 5% 0;
+    width:100%;
+}
+#index-qa h2{
+    text-align: center;
+    margin-bottom:2rem;
+}
+#index-qa a{
+    color:black;
+    text-align: center;
+    display:block;
+    margin:auto;
+}
+
+#about-btn{
+    background-color: #005A8B;
+    color:white;
+    padding:1rem;
+    width:200px;
+    margin:auto;
+    display:block;
+}
+
+.index-flex{
+    display:block;
+}
+
+/*Footern*/
+.main-footer ul{
+    padding-left:0;
+}
+
+.main-footer ul{
+    list-style-type: none;
+}
+
+.main-footer a{
+    color:white;
+    font-size:1.6rem;
+    text-decoration: underline;
+}
+.main-footer h3{
+    margin-bottom:0.9rem;
+    padding-left:0;
+}
+.main-footer p{
+    margin-top:0;
+}
+.main-footer{
+background-color: #004165;
+color:white;
+padding:2%;
+text-align: center;
+}
+
+.backtotop{
+margin-top:3rem;
+padding:2%;
+}
+.secondFooter{
+    background-color: #E5EEF3;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding:1rem;
+}
+
+
+/*Hoppa till huvudinnehållet. Syns endast vid klick på tab*/
+ .skip-to-main {
+    background: #000000;
+    left: 25%;
+    padding: 1rem;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    z-index:3;
+    color:white;
+  }
+  
+  .skip-to-main:focus {
+    transform: translateY(0%);
+  }
+
+
+/*Bread Crumbs*/
+.breadcrumbs{
+    padding-top:2%;
+}
+.breadcrumbs ul {
+    list-style-type: none;
+}
+ul.breadcrumbs li {
+    display: inline;
+    font-size: 1.6rem;
+  }
+ul.breadcrumbs a{
+    color:black;
+    text-decoration: none;
+}
+ul.breadcrumbs a:hover{
+    text-decoration: underline;
+}
+
+/*Kontakt-sidan*/
+.contact-section{
+    padding-left:1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom:3rem;
+    max-width:500px;
+    width:100%;
+    margin:auto;
+}
+
+.contact-section h2{
+    margin-top:2rem;
+}
+.contact-section label{
+    font-size: 1.6rem;
+    font-family:'Open Sans', Helvetica, sans-serif;
+}
+
+.contact-section input[type=text]{
+    background-color: #F0F3F4;
+    padding:0.5rem;
+    max-width:100%;
+    width:350px;
+}
+
+#telephone{
+    margin-top:3rem;
+}
+.form-buttons{
+    display: flex;
+}
+/*Knapparna i kontaktformuläret*/
+#send{
+    flex: 1;
+    margin-left:5rem;
+    background-color: rgb(8, 94, 8);
+}
+#send:hover{
+   background-color: rgb(136, 255, 136);
+   color:black;
+}
+
+#reset{
+    background-color: rgb(94, 8, 8);
+}
+#reset:hover{
+    background-color: rgb(255, 129, 129);
+    color:black;
+}
+
+/*Röd färg för symbolen * i kontaktformulär*/
+.red{
+    color:rgb(122, 0, 0);
+}
+
+.form-buttons button{
+    color:white;
+    width:108px;
+    padding:1rem;
+    margin-top:3rem;
+}
+
+.form-buttons button:hover{
+    font-weight: bold;
+}
+
+
+.contact-section textarea{
+    max-width:100%;
+    background-color: #F0F3F4;
+    margin:auto;
+}
+
+#contact-btn{
+    background-color: #004165;
+    color:white;
+    margin: 4rem auto 0 auto;
+    max-width:500px;
+}
+
+#collapse-article-mypage{
+    margin:0 auto 2rem auto;
+    max-width:500px;
+}
+#collapse-article-mypage h3{
+    text-align: center;
+    padding-bottom:2rem;
+}
+
+/*Info-sidan*/
+#aboutSection{
+    padding-left:1.5rem;
+    padding-right: 1.5rem;
+}
+#aboutSection >h1{
+    margin:0;
+}
+
+#aboutSection article{
+    max-width:500px;
+    width:100%;
+    margin:auto;
+    padding:2%;
+}
+
+#aboutSection h2{
+    margin-top:3rem;
+}
+
+#aboutSection h3{
+    margin-top:2rem;  
+}
+
+#aboutSection li{
+    line-height:1.6;
+    margin-top:1rem;
+}
+em{
+    font-size: 1.6rem;
+}
+
+#aboutSection ul li{
+    max-width:500px;
+    width:100%;
+}
+.assign-button{
+    background-color: #005A8B;
+    color:white;
+    width:80vw;
+    max-width:500px;
+    display: block;
+    margin:auto;
+    padding:1rem;
+    margin-top:2rem;
+}
+
+.assign-button:hover{
+    background-color: white;
+    color:black;
+}
+
+#questionsSection{
+    background-color: #E5EEF3;
+    margin-top:5rem;
+    padding-bottom:3rem;
+}
+#questionsSection h2{
+    text-align: center;
+padding-top:2rem;
+padding-bottom:2rem;
+}
+.flex-questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.collaps-article{
+    background-color: white;
+    padding:1.5rem;
+    box-shadow: 1px 2px 5px 0.5px rgba(0, 0, 0, 0.5);
+    margin:1rem auto;
+    display: none;
+    width:90vw;
+    max-width:100%;
+}
+
+.collaps-article h3{
+    margin-bottom:1.5rem;
+}
+
+.collaps-btn{
+    background-color: white;
+    padding:2rem;
+    margin:auto;
+    display:block;
+    margin-bottom:1rem;
+    width:90vw;
+    max-width:100%;
+}
+.collaps-btn:hover{
+    background-color: #004165;
+    color:white;
+    font-weight: normal;
+    cursor:pointer;
+}
+
+.collaps-btn i{
+    position:relative;
+    left:2%;
+}
+
+/*Boka-sidan*/
+#container-book{
+padding:0 2rem;
+}
+#container-book p{
+    max-width:500px;
+    width:100%;
+}
+#container-book h1{
+    margin: 1rem auto;
+}
+
+.booking h3{
+    text-align: center;
+    margin-bottom:0;
+}
+.booking h2{
+    text-align: center; 
+    margin-bottom:0;
+}
+.booking h4{
+    text-align: center;
+    margin-bottom:0;
+}
+
+.booking p{
+    padding-left:3%;
+    margin-bottom:1rem;
+    text-align: center;
+}
+.booking{
+    margin-top:4rem;
+    border-radius: 5px;
+    max-width:800px;
+    display: block;
+}
+
+.booking label{
+    font-size: 1.6rem;
+    padding-bottom:1rem;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height:1.6;
+}
+.booking input{
+    padding:1%;
+}
+
+
+.grey-color{
+background-color: #eef3f7;
+padding-top:2rem;
+padding-bottom:2rem;
+padding-left:2rem;
+border-radius: 5px;
+margin:2rem auto 4rem auto;
+display: block;
+}
+
+
+.booking input[type=text]{
+    width:80vw;
+    max-width:450px;
+    padding:1rem;
+    margin-top:0.5rem;
+}
+.booking form{
+    padding:0 2% 2% 2%;
+}
+#container-book p{
+    display:block;
+    margin:auto;
+    margin-bottom:2rem;
+}
+#time-home{
+    display: block;
+    margin:auto auto 2rem auto;
+}
+#timeHome{
+    text-align: center;
+    display: none;
+}
+#thanks-p{
+    font-weight: bold;
+    text-align: center;
+}
+
+#added{
+    font-weight: bold;
+    text-align: center;
+    padding:2%;
+}
+
+
+
+#addTrip{
+    background-color: #004165;
+    color:white;
+    box-shadow: 2px 3px 10px 0.5px rgba(0, 0, 0, 0.5);
+    border:none;
+    padding:2%;
+    width:210px;
+    display:block;
+    margin:auto;
+}
+#booking{
+    background-color: white;
+}
+select {
+    padding:0.5rem;
+    margin-left:1rem;
+}
+.radio-container {
+    border-bottom:2px solid #004165;
+    padding-bottom: 2rem;
+}
+
+/*Mina-sidor*/
+
+#mypage {
+    padding:1% 4%;
+}
+
+#mypage h1{
+    margin-top:0;
+}
+
+#mypage article{
+    border-bottom: 1px solid #004165;
+    margin-top:1.5rem;
+}
+
+.unbook-btn{
+    background-color: rgb(121, 3, 3);
+    color:white;
+    padding:2rem;
+    max-width:500px;
+    width:100%;
+    display: block;
+    margin:4rem auto 5rem auto;
+}
+.unbook-btn:hover{
+    color:#004165;
+    background-color: white;
+    font-weight: bold;
+}
+.unbook-div{
+    display: none;
+    background-color: #E5EEF3;
+    padding:2rem;
+    margin: 0 auto 2rem auto;
+    width:100%;
+    max-width:500px;
+    text-align: center;
+    border:1px solid #005A8B;
+}
+.unbook-trip-btn{
+    padding:2rem;
+    width:80%;
+    max-width:200px;
+    margin:auto;
+    display: block;
+    background-color: #004165;
+    color:white;
+}
+.unbook-trip-btn:hover{
+    background-color: white;
+    color:#004165;
+}
+
+.change-btn{
+    background-color: #005A8B;
+    color:white;
+    padding:2rem;
+    max-width:500px;
+    width:100%;
+    display: block;
+    margin: 3rem auto 0 auto;
+}
+.change-btn:hover{
+    background-color: white;
+    color:#004165;
+}
+
+.change-div form{
+    background-color: #E5EEF3;
+    margin-top:0;
+    padding:3%;
+    max-width:500px;
+    width:100%;
+    display: block;
+    margin:auto;
+}
+.change-h3{
+    text-align: center;
+}
+
+.change-trip-btn{
+    background-color: #004165;
+    color:white;  
+    padding:1rem;
+    margin: 2rem auto;
+    display: block; 
+}
+.change-trip-btn:hover{
+    background-color: white;
+    color:#004165;
+    font-weight: bold;
+}
+
+.change-div{
+    display: none;
+}
+
+.change-div form > label{
+    font-size: 1.6rem;
+    font-family:'Open Sans', Helvetica, sans-serif;
+}
+
+.change-div input[type=text] {
+    padding:0.5rem;
+    max-width:100%;
+    width:350px;
+}
+select{
+    display: block;     
+    margin: auto;
+}
+#quantity-style{
+    text-align: center;
+}
+.mypage-buttons{
+    margin-top:2rem;
+}
+
+#mypage-button{
+    background-color: #90326E;
+    color:white;
+    max-width:100%;
+    width:80vw;
+    font-size: 1.8rem;
+}
+
+#mypage-button2{
+    background-color: #90326E;
+    color: white;
+    max-width: 100%;
+    width: 80vw;
+    font-size: 1.8rem;
+}
+#sect5{
+    max-width:100%;
+    width:80vw;
+    padding:4%;
+}
+#sect5 p{
+    margin-bottom:1rem;
+}
+
+#sect6{
+    max-width:100%;
+    width:80vw;
+}
+
+#collaps-article > h2{
+margin-top:0.5rem;
+margin-bottom:0;
+}
+
+#collaps-article > p{
+    margin:0;
+}
+
+#collaps-article2 > article > h2{
+margin:0;
+}
+#collaps-article2 > article > h3{
+    margin-bottom:0.2rem;
+    margin-top:0;
+}
+
+#collaps-article2s > article > p{
+    margin:0;
+}
+#collaps-article2s > article >article> p{
+    margin:0;
+}
+
+.trip-home{
+    background-color: #004165;
+    padding:2%;
+    color:white;
+    margin: 3rem auto 2rem auto;
+    display: block;
+    }
+#trip-home:hover{
+    color:#004165;
+    background-color: white;
+    font-weight: bold;
+}
+#trip-home{
+    width:200px;
+}
+
+.label-radio{
+   padding-left:20%;
+}
+
+#textMessage{
+    margin:0.5rem auto;
+    display: block;
+    width:100%;
+    max-width:700px;
+}
+
+#label-center{
+    display: block;
+    text-align: center;
+}
+
+/*Tillgänglighetsredogörelsen*/
+#text-access{
+        width:100%;
+    max-width:500px;
+}
+#check{
+    font-size:4rem;
+    text-align: center;
+    display: none;
+}
+
+#acces-h1{
+margin-bottom:5rem;
+word-wrap: break-word; 
+font-size:2.5rem;
+line-height:3;
+}
+.access-p{
+    margin-bottom:2rem;
+}
+#access-container h1, h2, h3, h4, p {
+    width:100%;
+    max-width:500px;
+    margin: auto;
+    display: block;
+}
+
+#access-container{
+    padding-left:1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom:3rem;
+    max-width:500px;
+    width:100%;
+    margin:auto;
+}
+
+#acces-form{
+box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.5);
+max-width:450px;
+display: block; 
+margin:3rem auto;
+padding:3%;
+}
+
+#acces-form input[type=text] {
+    padding:0.5rem;
+    max-width:400px;
+    width:100%;
+}
+#acces-form label{
+    font-size:1.6rem;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+/*Media quiries för skärmar som är minst 600*/
+@media only screen and (min-width: 600px) {
+    .index-flex{
+        display:flex;
+    }
+
+    .main-footer ul{
+        padding-left:0;
+    }
+    .logo{
+        max-width:100%;
+    }
+}
+/* 992pixlar och uppåt */
+@media only screen and (min-width: 992px) {
+    main{
+        display:block;
+    margin:auto;
+}
+    html{
+        background-color: #F0F3F4;
+    }
+    main{background-color: white;
+}
+.search{
+    max-width:300px;
+    position:absolute;
+    top:0;
+    left:40%;
+}
+.logo{
+ position:relative;
+ left:12%;
+}
+#trip-date{
+    text-align: center;
+}
+
+.booking input[type=text]{
+    width:90vw;
+    max-width:310px;
+    padding:1rem;
+    margin-top:0.5rem;
+}
+
+#addTrip{
+    margin-bottom:3rem;
+}
+.collaps-article{
+   max-width: 500px;
+}
+.collaps-btn{
+ max-width:500px;
+}
+
+.collaps-btn:hover{
+    font-weight: bold;
+}
+.booking{
+    display: block;
+    margin:auto;
+
+}
+.mypage-btn{
+    position:absolute;  
+    right:18%;
+    padding:0.5rem;
+    width:111px;
+    text-align: center;
+}
+.main-footer li{
+    padding-top:1rem;
+}
+
+.hamburger-icon{
+    position:absolute;
+    right:10%;
+    top:1.6rem;
+    background-color:#005A8B;
+    box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.5);
+    font-size:1.4rem;
+    z-index:2;
+}
+.hamburger-text{
+    display:inline-block;
+}
+
+.hamburger-icon i{
+    margin-right:0.5rem;
+}
+.nav-ul.nav-ul.show{
+    max-width:400px;
+    position:absolute;
+    top:0;
+    right:8%;
+    padding:2rem;
+    border:5px solid #004165;
+    height:40vw;
+    z-index:1;
+}
+
+#collaps-article{
+    width:100%;
+    max-width:650px;
+}
+#mypage-button{
+    width:100%;
+    max-width:650px;
+}
+.mypage-flex{
+    display: flex;
+}
+.mypage-flex > div{
+    width:50%;
+    padding:2rem;
+}
+#collaps-article2{
+    width:100%;
+    max-width:650px;
+}
+
+    #indexBoxes{
+        margin-left:10rem;
+    }
+        .flex-questions{
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+    .flex-questions>div{
+        width:50%;
+        padding:1%;
+    }
+    .booking-flex{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .booking-flex > div{
+        margin:3rem;
+        max-width:50%;
+    }
+    #trip-time{
+        display: block;
+        margin: auto;
+    }
+    .main-footer{
+        display: flex;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #004165;
+        color:white;
+        justify-content: center;
+        text-align: left;
+    }
+    .main-footer div{
+        margin:3rem;
+        padding:2%;
+    }
+}
+/* 1280 pixlar och uppåt */
+@media only screen and (min-width: 1280px) {
+    .hamburger-icon{
+        position:absolute;
+        top:1.5rem;
+        right:12%;
+        z-index:2;
+    }
+    .logo{
+        position:relative;
+        left:1%;
+    }
+    .hamburger-text{
+        display:inline-block;
+    }
+    .nav-ul.nav-ul.show{
+        position:absolute;
+        right:11.5%;
+    }
+    #acces-h1{
+        font-size: 3.2rem;
+    }
+
+}

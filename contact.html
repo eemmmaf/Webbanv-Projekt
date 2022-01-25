@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skellefteå kommun färdtjänst">
+    <link rel="stylesheet" href="styles.css">
+    <!--Faviconer-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+    <!--Hämtar hamburger-ikonen-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/95698cec21.js" crossorigin="anonymous"></script>
+    <title>Skellefteå kommun - Färdtjänst</title>
+</head>
+
+<body>
+    <!--Knapp som är gömd där användaren kan hoppa till huvudinnehåll. Syns med tab-->
+    <a class="skip-to-main" href="#main-contact">Gå till huvudinnehållet</a>
+    <header>
+        <!--Här startar hamburger-menyn-->
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-wrapper">
+                <!--Logotypen-->
+                <a href="index.html"><img class="logo" id="logo" src="images/logo.svg" alt="logotyp"></a>
+                <!-- Sökruta-->
+                <form role="search">
+                    <div class="search" id="search">
+                        <input type="text" placeholder="Sök" class="search-bar" id="search-desktop" aria-label="Sök">
+                        <button type="submit" class="searchButton" value="search" title="sök">
+                            <i class="fa fa-search"> Sök</i>
+                        </button>
+                    </div>
+                </form>
+
+
+                <!--Mina sidor-länk(Stylad som knapp)-->
+                <div class="mypage-btn"> <a href="mypage.html" aria-label="mina sidor"> <i
+                            class="fas fa-user fa-sm"></i>
+                        Mina sidor</a> </div>
+
+
+
+                <!--Hamburger-ikonen. Span-texten syns endast för större skärmar-->
+                <button class="hamburger-icon" id="hamburger-icon" value="menu" aria-label="meny"><i
+                        class="fas fa-bars"></i><span class="hamburger-text">Meny</span></button>
+
+                <!--Länkarna i navigeringen. Gömda by default-->
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a href="index.html">Mina sidor</a></li>
+                    <li><a href="book.html">Boka färdtjänst</a></li>
+                    <li><a href="about.html">Om färdtjänst</a></li>
+                    <li><a class="active-link" href="contact.html">
+                            Kontakta oss
+                        </a></li>
+                    <li><a href="accesibility.html">Tillgänglighetsredogörelse</a></li>
+                    <li><a href="index.html"> <i class="fas fa-sign-out-alt"></i> Logga ut</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Här slutar header och main börjar-->
+
+    <main id="main-contact">
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Startsida ></a></li>
+            <li><strong> Kontakta oss</strong></li>
+        </ul>
+
+        <!--Sektion för innehåll-->
+        <section class="contact-section">
+            <h1>Kontakta oss</h1>
+            <p><strong>Här hittar du information om hur du kan kontakta oss för dina frågor om färdtjänst. Du kan ringa,
+                    maila,
+                    besöka eller skicka ett meddelande direkt till oss i ett formulär. </strong></p>
+            <h2>Ring kundtjänst</h2>
+            <p>Ring 0910 73 50 00 för att komma i kontakt med färdtjänstens kundtjänst. Välj knappval 1. Du kommer att
+                få hjälp av en handläggare. Kundtjänsten är öppen på vardagar mellan 08:00-17:00. </p>
+
+            <h2>Skicka ett meddelande</h2>
+            <p>Du kan kontakta oss genom att skicka ett meddelande. Vi svarar på dina frågor så snabbt som möjligt. Vi
+                kan återkoppla till din mailadress eller till din telefon. Du hittar kontaktformuläret nedan. </p>
+
+            <!--Knapp med kontaktformulär-->
+            <button type="button" class="collaps-btn" id="contact-btn">Kontaktformulär<i
+                    class="fas fa-chevron-down arrow"></i></button>
+            <!--Expanderande formulär-->
+            <article class="collaps-article" id="collapse-article-mypage">
+                <h3>Kontaktformulär</h3>
+                <form>
+                    <label for="fname">Namn <span class="red">*</span></label><br>
+                    <input type="text" id="fname" name="fname" required><br>
+                    <label for="telefonnummer">Telefonnummer:</label><br>
+                    <input type="text" id="telefonnummer" name="telefonnummer"><br>
+                    <label for="mailadress">Mailadress:</label><br>
+                    <input type="text" id="mailadress" name="mailadress"><br><br>
+                    <label for="textMessage">Meddelande<span class="red">*</span></label><br>
+                    <textarea name="textMessage" id="textMessage" rows="4" cols="50" required>
+                        </textarea>
+
+                    <p>Jag vill bli kontaktad via:</p>
+                    <input type="radio" id="mejl" name="mejl" value="mejl">
+                    <label for="mejl">Mail</label><br>
+                    <input type="radio" id="telephone" name="telephone" value="telephone">
+                    <label for="telephone">Telefon</label><br>
+                    <div class="form-buttons">
+                        <button id="reset" type="reset">Rensa <i class="fas fa-times"></i></button>
+                        <button id="send">Skicka <i class="far fa-paper-plane"></i></button>
+                    </div>
+                    <p id="output"></p>
+                </form>
+            </article>
+            <!--Slut på kontaktformulär-->
+
+            <h2>Maila oss </h2>
+            <a href="mailto:emfo2102@student.miun.se">emfo2102@student.miun.se</a>
+            <h2>Besök oss</h2>
+            <p>Adress: Färdtjänstgatan 10.
+                1 trappa.</p>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <!--Footer-->
+    <footer class="main-footer">
+        <div>
+            <h3>Kontakta oss</h3>
+            <p>Kundtjänst: 0910 73 50 00<br>Mail: emfo2102@student.miun.se<br><br></p>
+            <a href="contact.html">Skicka meddelande direkt på webbplatsen</a>
+        </div>
+        <div>
+            <h3>Länkar</h3>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="mypage.html">Mina sidor</a></li>
+                <li><a href="book.html">Boka färdtjänst</a></li>
+                <li><a href="about.html">Om färdtjänst</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tillgänglighet</h3>
+            <a href="accesibility.html">Tillgänglighetsredogörelse</a>
+        </div>
+        <div class="backtotop"><a href="#logo">Tillbaka till toppen av sidan</a></div>
+    </footer>
+    <footer class="secondFooter"><span>Emma Forslund. emfo2102@student.miun.se</span></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

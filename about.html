@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Skellefteå kommun färdtjänst">
+    <!--Faviconer-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+    <!--Hämtar hamburger-ikonen-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/95698cec21.js" crossorigin="anonymous"></script>
+    <title>Skellefteå kommun - Färdtjänst</title>
+</head>
+
+<body>
+    <!--Knapp som är gömd där användaren kan hoppa till huvudinnehåll. Syns med tab-->
+    <a class="skip-to-main" href="#main">Gå till huvudinnehållet</a>
+    <header>
+        <!--Här startar hamburger-menyn-->
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-wrapper">
+                <!--Logotypen-->
+                <a href="index.html"><img class="logo" id="logo" src="images/logo.svg" alt="logotyp"></a>
+                <!-- Sökruta-->
+                <form role="search">
+                    <div class="search" id="search">
+                        <input type="text" placeholder="Sök" class="search-bar" id="search-desktop" aria-label="Sök">
+                        <button type="submit" class="searchButton" value="search" title="sök">
+                            <i class="fa fa-search"> Sök</i>
+                        </button>
+                    </div>
+                </form>
+
+                <!--Mina sidor-länk(Stylad som knapp)-->
+                <div class="mypage-btn"> <a href="mypage.html" aria-label="mina sidor"><i class="fas fa-user fa-sm"></i>
+                        Mina sidor</a> </div>
+
+                <!--Hamburger-ikonen. Span-texten syns endast för större skärmar-->
+                <button class="hamburger-icon" id="hamburger-icon" value="menu" aria-label="meny"><i
+                        class="fas fa-bars"></i><span class="hamburger-text">Meny</span></button>
+
+                <!--Länkarna i navigeringen. Gömda by default-->
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a href="mypage.html">Mina sidor</a></li>
+                    <li><a href="book.html">Boka färdtjänst</a></li>
+                    <li><a class="active-link" href="about.html">
+                            Om färdtjänst
+                        </a></li>
+                    <li><a href="contact.html">Kontakta oss</a></li>
+                    <li><a href="accesibility.html">Tillgänglighetsredogörelse</a></li>
+                    <li><a href="index.html"> <i class="fas fa-sign-out-alt"></i> Logga ut</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Här slutar header och main börjar-->
+    <main id="main">
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Startsida ></a></li>
+            <li><strong> Om färdtjänst</strong></li>
+        </ul>
+        <section id="aboutSection">
+            <h1>Om färdtjänst</h1>
+            <article>
+                <p><strong>Du kan ansöka om färdtjänst om du har en varaktig funktionsnedsättning som gör att du har
+                        stora svårigheter att förflytta dig på egen hand eller att resa med allmän
+                        kollektivtrafik.</strong></p>
+                <h2>Rätt till färdtjänst</h2>
+                <p>När du har ansökt om färdtjänst får du ett skriftligt beslut. I beslutet står det om du beviljas
+                    färdtjänst eller inte. <br><br>
+
+                    Beslutet kan gälla för en viss period eller tills vidare. I beslutet kan det stå hur många
+                    färdtjänstresor du får göra per månad eller per år. Om du inte är nöjd med beslutet kan du överklaga
+                    det.
+                </p>
+                <h2>Hur ansöker jag?</h2>
+                <p>Du kan ansöka om färdtjänst på denna webbplats genom att trycka på knappen nedan. När du trycker på
+                    knappen loggar du in med e-legitimation och fyller i ett formulär. <br><br>
+                    Kontakta Skellefteå kommuns kundtjänst via 0910-73 50 00 (knappval 1) om du har frågor om färdtjänst
+                    eller vill ha hjälp att ansöka om färdtjänst. När du har ringt kundtjänst kommer en
+                    färdtjänsthandläggare att kontakta dig för att utreda din ansökan.</p>
+                <button class="assign-button">Ansök om färdtjänst <i class="fas fa-external-link-alt"></i></button><br>
+                <h2>Avgifter</h2>
+                <p>Prislistan bygger på Länstrafikens prislista med ett påslag med 25 kronor. Du betalar alltid minst 52
+                    kronor för en enkelresa. Färdtjänstberättigade barn och ungdomar upp till 19 år betalar i enlighet
+                    med Länstrafikens taxa för barn och ungdomar upp till 19 år, med ett påslag på 25 kronor per
+                    enkelresa.</p>
+                <h3>Kostnadsfria resor</h3>
+                <p>Följande färdtjänstresenärer i Skellefteå kommun betalar ingen avgift för färdtjänstresor:</p>
+                <ul>
+                    <li>Gymnasieelever med beslut om färdtjänst, när de reser från hemmet till gymnasieskolan och från
+                        gymnasieskolan till hemmet. Andra sträckor gäller ordinarie färdtjänsttaxa.</li>
+                    <li>Barn med beslut om färdtjänst, när de reser från hemmet till förskolan/fritidshemmet och från
+                        förskolan/fritidshemmet till hemmet. Andra sträckor gäller ordinarie färdtjänsttaxa.</li>
+                    <li>Ungdomar med beslut om färdtjänst, när de reser från hemmet till korttidstillsyn och från
+                        korttidstillsyn till hemmet. Andra sträckor gäller ordinarie färdtjänsttaxa.</li>
+                </ul>
+                <h3>Avgifter för dagverksamhet </h3>
+                <p>Personer som åker färdtjänst till dagverksamhet för personer med demenssjukdom, inom vård och omsorg,
+                    betalar 20 kronor per enkelresa. Du betalar inte någon avgift i taxin utan får en faktura i
+                    efterskott på reskostnaden. Avgiften gäller mellan din folkbokföringsadress (ej sommarbostad) och
+                    dagverksamheten. Andra sträckor gäller ordinarie färdtjänsttaxa.</p>
+                <h3>Avgifter för daglig verksamhet</h3>
+                <p>Personer som åker färdtjänst till daglig verksamhet betalar 16 kronor per enkelresa. Resan faktureras
+                    av Skellefteå Taxi om du har ett faktureringskort (ansök om ett faktureringskort hos Skellefteå Taxi
+                    genom att ringa 0910-173 10), annars betalar du egenavgiften i samband med resan. Avgiften gäller
+                    mellan din folkbokföringsadress (ej sommarbostad) och den dagliga verksamheten. Andra sträckor
+                    gäller ordinarie färdtjänsttaxa.</p>
+                <p>Källa: Skellefteå kommun.</p>
+            </article>
+        </section>
+
+        <!--Frågor och svar-sektion-->
+        <section id="questionsSection">
+            <h2>Frågor och svar</h2>
+
+            <!--Artikel 1-->
+            <div class="flex-questions">
+                <div>
+                    <button type="button" class="collaps-btn">Behöver jag medicinskt intyg?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Medicinsk intyg kan behövas</h3>
+                        <p>När du ansöker om färdtjänst kan du behöva skicka in ett medicinskt intyg som styrker din
+                            funktionsnedsättning, dess varaktighet och dina svårigheter att förflytta dig och resa med
+                            kollektivtrafik. Om det är första gången du ansöker om färdtjänst så kommer du att behöva
+                            lämna in
+                            ett medicinskt intyg.
+
+                            <br><br>
+
+                            Intyget kan utfärdas av en läkare, sjukgymnast/fysioterapeut, sjuksköterska eller
+                            arbetsterapeut. Du
+                            får troligtvis betala en avgift till din hälsocentral eller vårdmottagning för att få ett
+                            intyg.<br><br>Källa: Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+
+                <!--Artikel 2-->
+                <div>
+                    <button type="button" class="collaps-btn">Får jag ta med en ledsagare? <i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Du får ta med en ledsagare om du behöver hjälp på destinationen</h3>
+                        <p>Om du behöver hjälp utanför själva färdtjänstresan till exempel när du ska handla, har du
+                            möjlighet
+                            att ta med en medresenär. När du bokar färdtjänst ska du ange om du har med dig en
+                            medresenär.
+
+                            Om du på grund av din funktionsnedsättning behöver hjälp under själva färden kan du ansöka
+                            om en
+                            ledsagare. Du har inte rätt till ledsagare under resan om du klarar resan själv men behöver
+                            hjälp
+                            när du kommer fram.<br><br>Källa: Skellefteå kommun.</p>
+                    </article>
+                </div>
+
+                <!--Artikel 3-->
+                <div>
+                    <button type="button" class="collaps-btn">Vad kostar färdtjänst?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Priset beror på vad du använder färdtjänsten till</h3>
+                        <p>Priset för färdtjänst beror på vad du använder färdtjänsten till. För vanliga färdtjänstresor
+                            (så
+                            kallade fritidsresor) finns en prislista, för arbetsresor, alltså resor som du gör till och
+                            från
+                            ditt arbete eller där du studerar, har Skellefteå kommun en särskild prislista.
+
+                            <strong> Prislistan bygger på Länstrafikens prislista med ett påslag med 25 kronor. Du
+                                betalar alltid
+                                minst
+                                52 kronor för en enkelresa. </strong> Färdtjänstberättigade barn och ungdomar upp till
+                            19 år betalar i
+                            enlighet med Länstrafikens taxa för barn och ungdomar upp till 19 år, med ett påslag på 25
+                            kronor
+                            per enkelresa.<br><br>Källa: Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+                <!--Artikel 4-->
+                <div>
+                    <button type="button" class="collaps-btn">Hur betalar jag?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Du betalar till chauffören eller med faktureringskort</h3>
+                        <p>Du betalar för din färdtjänst direkt till chauffören vid varje resa eller via
+                            faktureringskort i
+                            efterhand. För att ansöka om faktureringskort kontaktar du Skellefteå Taxi på telefon
+                            0910-173 10. <br><br>Källa: Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+
+                <!--Artikel 5-->
+                <div>
+                    <button type="button" class="collaps-btn">Vad innebär riksfärdtjänst?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Riksfärdtjänst avser resor mellan kommuner</h3>
+                        <p>Riksfärdtjänst avser resor från en kommun till en annan kommun inom Sverige där
+                            folkbokföringskommunen lämnar ersättning för kostnader utöver normala reskostnader för
+                            personer
+                            som till följd av ett stort och varaktigt funktionshinder måste resa på ett särskilt
+                            kostsamt sätt.
+                            Kraven för riksfärdtjänst är högre än för färdtjänst.
+                            <br><br>Källa: Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+                <!--Artikel 6-->
+                <div>
+                    <button type="button" class="collaps-btn">Hur långt får jag åka? <i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Färdtjänsten gäller inom Skellefteå kommun</h3>
+                        <p>
+
+                            Om du bor i utkanten av kommunen och din närmaste serviceort ligger i en annan kommun kan du
+                            få åka
+                            färdtjänst dit för att till exempel göra post- och bankärenden, eller besöka en optiker.
+                            <br><br>
+                            Källa:Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+
+                <!--Artikel 7-->
+                <div>
+                    <button type="button" class="collaps-btn">Får jag göra stopp under resan?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Stopp godkänns endast vid medicinska skäl</h3>
+                        <p>Kollektivtrafik kännetecknas av samåkning utan uppehåll, förutom vid hållplatser. Uppehåll
+                            medges därför inte heller vid färdtjänstresor. Vid uppehåll räknas fortsatt resa efter
+                            uppehållet som en ny resa.
+
+                            Avsteg kan göras om medicinska skäl föreligger.
+
+                            <br><br>
+                            Källa:Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+                <!--Artikel 8-->
+                <div>
+                    <button type="button" class="collaps-btn">Får husdjur följa med?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Ledarhund eller servicehund får följa med på resan</h3>
+                        <p>Färdtjänst ska i största möjliga mån samordnas varmed samåkning i stor utsträckning
+                            förekommer. Vid färdtjänstresor får sällskapsdjur därmed inte medföras på grund av risk för
+                            allergi.
+
+                            Personer som har ledarhund eller servicehund får ta med den på resan.
+
+                            <br><br>
+                            Källa:Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+
+                <!--Artikel 9-->
+                <div>
+                    <button type="button" class="collaps-btn">Behöver jag visa upp något för chauffören?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Du måste ta med giltig ID-handling</h3>
+                        <p>Det räcker att du legitimerar dig med en giltig ID-handling. Till exempel ett körkort, pass
+                            eller ID-kort.
+
+                            Det är ditt ansvar att hålla reda på när färdtjänsttillståndet går ut
+
+                            <br><br>
+                            Källa:Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+
+
+                <!--Artikel 10-->
+                <div>
+                    <button type="button" class="collaps-btn">Vad räknas som arbetsresa?<i
+                            class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article">
+                        <h3>Resa mellan hemadress och arbetsplats</h3>
+                        <p>
+                            För personer som är beviljade färdtjänst och regelbundet reser till ett förvärvsarbete eller
+                            en utbildning som ger rätt till statligt stöd enligt studiestödsförordningen (2000:655) med
+                            en fast angiven målpunkt kan arbetsresor beviljas. Såväl heltids- som deltidsarbetande samt
+                            heltids- eller deltidsstuderande kan beviljas arbetsresor.<br><br>
+
+                            <strong>Med arbetsresor avses färdtjänstresor med reducerad egenavgift för färdtjänst.
+                                Arbetsresor
+                                medges inte utanför färdtjänstområdet, Skellefteå kommun.</strong>
+
+                            Arbetsresor beviljas med maximalt en tur- och returresa per dag, mellan
+                            folkbokföringsadressen och arbetsplatsen.<br><br>
+
+                            Särskild prövning kan medge fler än två resor per dag. Anledning till detta kan vara
+                            exempel-vis delad tur.
+
+                            <br><br>Källa: Skellefteå kommun.
+
+
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+    <!--Footer-->
+    <footer class="main-footer">
+        <div>
+            <h3>Kontakta oss</h3>
+            <p>Kundtjänst: 0910 73 50 00<br>Mail: emfo2102@student.miun.se<br><br></p>
+            <a href="contact.html">Skicka meddelande direkt på webbplatsen</a>
+        </div>
+        <div>
+            <h3>Länkar</h3>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="mypage.html">Mina sidor</a></li>
+                <li><a href="book.html">Boka färdtjänst</a></li>
+                <li><a href="about.html">Om färdtjänst</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tillgänglighet</h3>
+            <a href="accesibility.html">Tillgänglighetsredogörelse</a>
+        </div>
+        <div class="backtotop"><a href="#logo">Tillbaka till toppen av sidan</a></div>
+    </footer>
+    <footer class="secondFooter"><span>Emma Forslund. emfo2102@student.miun.se</span></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skellefteå kommun färdtjänst">
+    <link rel="stylesheet" href="styles.css">
+    <!--Hämtar hamburger-ikonen-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/95698cec21.js" crossorigin="anonymous"></script>
+    <!--Faviconer-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+    <title>Skellefteå kommun - Färdtjänst</title>
+</head>
+
+<body>
+    <!--Knapp som är gömd där användaren kan hoppa till huvudinnehåll. Syns med tab-->
+    <a class="skip-to-main" href="#indexContainer">Gå till huvudinnehållet</a>
+    <header>
+
+        <!--Här startar hamburger-menyn-->
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-wrapper">
+
+                <!--Logotypen-->
+                <a href="index.html"><img class="logo" id="logo" src="images/logo.svg" alt="logotyp"></a>
+                <!-- Sökruta-->
+                <form role="search">
+                    <div class="search" id="search">
+                        <input type="text" placeholder="Sök" class="search-bar" id="search-desktop" aria-label="Sök">
+                        <button type="submit" class="searchButton" value="search" title="sök">
+                            <i class="fa fa-search"> Sök</i>
+                        </button>
+                    </div>
+                </form>
+
+                <!--Mina sidor-länk(Stylad som knapp)-->
+                <div class="mypage-btn"> <a href="mypage.html" aria-label="mina sidor"><i class="fas fa-user fa-sm"></i>
+                        Mina sidor</a> </div>
+
+
+                <!--Hamburger-ikonen. Span-texten syns endast för större skärmar-->
+                <button class="hamburger-icon" type="submit" id="hamburger-icon" value="menu" aria-label="meny"><i
+                        class="fas fa-bars"></i><span class="hamburger-text">Meny</span></button>
+
+                <!--Länkarna i navigeringen. Gömda by default-->
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a href="mypage.html">Mina sidor</a></li>
+                    <li><a href="book.html">Boka färdtjänst</a></li>
+                    <li><a href="about.html">Om färdtjänst</a></li>
+                    <li><a href="contact.html">Kontakta oss</a></li>
+                    <li><a href="accesibility.html">Tillgänglighetsredogörelse</a></li>
+                    <li><a href="index.html"> <i class="fas fa-sign-out-alt"></i> Logga ut</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <!--Här slutar header och main börjar-->
+
+
+
+    <main>
+        <section id="indexContainer">
+            <h1>Skellefteå kommun <br> Färdtjänst</h1>
+            <div class="index-flex">
+                <div id="indexText">
+                    <h2>Om denna webbplats</h2>
+                    <p>Skellefteå kommun erbjuder färdtjänst för resenärer som har fått färdtjänst beviljat. Du kan få
+                        färdtjänst beviljat om du har en varaktig funktionsnedsättning som gör att du har stora
+                        svårigheter
+                        att transportera dig på egen hand eller
+                        resa med allmän kollektiv trafik.</p>
+                    <p>På denna webbplats kan du:</p>
+                    <ul>
+                        <li>Ansöka om färdtjänst</li>
+                        <li> Se dina bokade resor</li>
+                        <li> Avboka och ändra dina resor</li>
+                        <li> Få information om färdtjänst</li>
+                        <li>Boka resa. Du kan boka till samma dag minst en timma innan resan.</li>
+                    </ul>
+                </div>
+
+                <!--Kontaktvägar-->
+                <div id="indexBoxes">
+                    <article>
+                        <h3>Boka direkt</h3>
+                        <i class="fas fa-phone-alt fa-lg"></i> <a href="callto:+4676101547">Via telefon: 0910 73 50 00
+                            (Knappval
+                            1)</a><br><br>
+                        <i class="fas fa-arrow-right fa-lg"> </i><a href="book.html">Via denna webbplats</a>
+                    </article>
+                    <!--Frågor eller funderingar-->
+                    <article>
+                        <h3>Frågor eller funderingar?</h3>
+                        <i class="far fa-envelope fa-lg"></i><a href="mailto:emfo2102@student.miun.se">Maila oss:
+                            emfo2102@student.miun.se</a><br><br>
+                        <i class="fas fa-headset fa-lg"></i><a href="callto:+4676101547">Ring oss: 0910 73 50 00
+                            (Knappval
+                            1)</a><br><br>
+                    </article>
+                    <article>
+                        <h3>Avboka/Ändra bokning</h3>
+                        <i class="fas fa-phone-alt fa-lg"></i><a href="callto:+4676101547">Via telefon: 0910 73 50 00
+                            (Knappval
+                            1)</a> <br><br>
+                        <i class="fas fa-arrow-right fa-lg"></i><a href="mypage.html">Via Mina sidor</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--Frågor  och svar-->
+        <section id="index-qa" aria-label="frågor och svar">
+            <h2>Vanliga frågor</h2>
+            <div class="flex-questions">
+                <!--Artikel 1-->
+                <div>
+                    <button type="button" class="collaps-btn" aria-expanded="false" aria-controls="sect1">Behöver jag
+                        medicinskt intyg?<i class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article" aria-live="polite" id="sect1" role="region">
+                        <h3>Medicinsk intyg kan behövas</h3>
+                        <p>När du ansöker om färdtjänst kan du behöva skicka in ett medicinskt intyg som styrker din
+                            funktionsnedsättning, dess varaktighet och dina svårigheter att förflytta dig och resa med
+                            kollektivtrafik. Om det är första gången du ansöker om färdtjänst så kommer du att behöva
+                            lämna in
+                            ett medicinskt intyg.
+
+                            <br><br>
+
+                            Intyget kan utfärdas av en läkare, sjukgymnast/fysioterapeut, sjuksköterska eller
+                            arbetsterapeut. Du
+                            får troligtvis betala en avgift till din hälsocentral eller vårdmottagning för att få ett
+                            intyg.<br><br>Källa: Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+
+                <!--Artikel 2-->
+                <div>
+                    <button type="button" class="collaps-btn" aria-expanded="false" aria-controls="sect2">Får jag ta med
+                        en ledsagare? <i class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article" aria-live="polite" role="region" id="sect2">
+                        <h3>Du får ta med en ledsagare om du behöver hjälp på destinationen</h3>
+                        <p>Om du behöver hjälp utanför själva färdtjänstresan till exempel när du ska handla, har du
+                            möjlighet
+                            att ta med en medresenär. När du bokar färdtjänst ska du ange om du har med dig en
+                            medresenär.
+
+                            Om du på grund av din funktionsnedsättning behöver hjälp under själva färden kan du ansöka
+                            om en
+                            ledsagare. Du har inte rätt till ledsagare under resan om du klarar resan själv men behöver
+                            hjälp
+                            när du kommer fram.<br><br>Källa: Skellefteå kommun.</p>
+                    </article>
+                </div>
+
+                <!--Artikel 3-->
+                <div>
+                    <button type="button" class="collaps-btn" aria-expanded="false" aria-controls="sect3">Vad kostar
+                        färdtjänst?<i class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article" aria-live="polite" role="region" id="sect3">
+                        <h3>Priset beror på vad du använder färdtjänsten till</h3>
+                        <p>Priset för färdtjänst beror på vad du använder färdtjänsten till. För vanliga färdtjänstresor
+                            (så
+                            kallade fritidsresor) finns en prislista, för arbetsresor, alltså resor som du gör till och
+                            från
+                            ditt arbete eller där du studerar, har Skellefteå kommun en särskild prislista.
+
+                            Prislistan bygger på Länstrafikens prislista med ett påslag med 25 kronor. Du betalar alltid
+                            minst
+                            52 kronor för en enkelresa. Färdtjänstberättigade barn och ungdomar upp till 19 år betalar i
+                            enlighet med Länstrafikens taxa för barn och ungdomar upp till 19 år, med ett påslag på 25
+                            kronor
+                            per enkelresa.<br><br>Källa: Skellefteå kommun.</p>
+                    </article>
+                </div>
+                <!--Artikel 4-->
+                <div>
+                    <button type="button" class="collaps-btn" aria-expanded="false" aria-controls="sect4">Hur betalar
+                        jag?<i class="fas fa-chevron-down arrow"></i></button>
+                    <article class="collaps-article" aria-live="polite" role="region" id="sect4">
+                        <h3>Du betalar till chauffören eller med faktureringskort</h3>
+                        <p>Du betalar för din färdtjänst direkt till chauffören vid varje resa eller via
+                            faktureringskort i
+                            efterhand. För att ansöka om faktureringskort kontaktar du Skellefteå Taxi på telefon
+                            0910-173 10.<br><br>Källa: Skellefteå kommun.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+            <a href="about.html"> <i class="fas fa-arrow-right fa-lg"></i>Till alla frågor och
+                svar</a>
+
+        </section>
+    </main>
+    <!--Footer-->
+    <footer class="main-footer">
+        <div>
+            <h3>Kontakta oss</h3>
+            <ul>
+                <li> Kundtjänst: 0910 73 50 00<br><a href="mailto:emfo2102@student.miun.se">emfo2102@student.miun.se</a>
+                </li>
+                <li><a href="contact.html">Skicka meddelande direkt på webbplatsen</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Länkar</h3>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="mypage.html">Mina sidor</a></li>
+                <li><a href="book.html">Boka färdtjänst</a></li>
+                <li><a href="about.html">Om färdtjänst</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tillgänglighet</h3>
+            <a href="accesibility.html">Tillgänglighetsredogörelse</a>
+        </div>
+        <div class="backtotop"><a href="#logo">Tillbaka till toppen av sidan</a></div>
+    </footer>
+    <footer class="secondFooter"><span>Emma Forslund. emfo2102@student.miun.se</span></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

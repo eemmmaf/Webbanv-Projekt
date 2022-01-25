@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skellefteå kommun färdtjänst">
+    <link rel="stylesheet" href="styles.css">
+    <!--Hämtar hamburger-ikonen-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/95698cec21.js" crossorigin="anonymous"></script>
+    <!--Faviconer-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+    <title>Skellefteå kommun - Färdtjänst</title>
+</head>
+
+<body>
+    <!--Knapp som är gömd där användaren kan hoppa till huvudinnehåll. Syns med tab-->
+    <a class="skip-to-main" href="#main-access">Gå till huvudinnehållet</a>
+    <header>
+        <!--Här startar hamburger-menyn-->
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-wrapper">
+                <!--Logotypen-->
+                <a href="index.html"><img class="logo" id="logo" src="images/logo.svg" alt="logotyp"></a>
+                <!-- Sökruta-->
+                <form role="search">
+                    <div class="search" id="search">
+                        <input type="text" placeholder="Sök" class="search-bar" id="search-desktop" aria-label="Sök">
+                        <button type="submit" class="searchButton" value="search" title="sök">
+                            <i class="fa fa-search"> Sök</i>
+                        </button>
+                    </div>
+                </form>
+
+                <!--Mina sidor-länk(Stylad som knapp)-->
+                <div class="mypage-btn"> <a href="mypage.html" aria-label="mina sidor"><i class="fas fa-user fa-sm"></i>
+                        Mina sidor</a> </div>
+
+
+                <!--Hamburger-ikonen. Span-texten syns endast för större skärmar-->
+                <button class="hamburger-icon" type="submit" id="hamburger-icon" value="menu" aria-label="meny"><i
+                        class="fas fa-bars"></i><span class="hamburger-text">Meny</span></button>
+
+                <!--Länkarna i navigeringen. Gömda by default-->
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a href="mypage.html">Mina sidor</a></li>
+                    <li><a href="book.html">Boka färdtjänst</a></li>
+                    <li><a href="about.html">Om färdtjänst</a></li>
+                    <li><a href="contact.html">Kontakta oss</a></li>
+                    <li><a class="active-link" href="accesibility.html">Tillgänglighetsredogörelse</a></li>
+                    <li><a href="index.html"> <i class="fas fa-sign-out-alt"></i> Logga ut</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Här slutar header och main börjar-->
+    <main id="main-access">
+        <!--Breadcrumbs-->
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Startsida ></a></li>
+            <li><strong> Tillgänglighetsredogörelse</strong></li>
+        </ul>
+        <section id="access-container">
+            <h1 id="acces-h1">Tillgänglighetsredogörelse</h1>
+            <p class="access-p"><strong>Skellefteå kommun står bakom den här webbplatsen. Vi vill att så många som
+                    möjligt
+                    ska kunna använda den. Det
+                    här dokumentet beskriver hur webbplatsen uppfyller lagen om tillgänglighet till digital offentlig
+                    service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att
+                    vi
+                    kan åtgärda dem.</strong></p><br>
+            <h2>Hur tillgänglig är min webbplats? </h2>
+            <p class="access-p"> Vi är medvetna om att delar av webbplatsen inte är helt tillgängliga. Se avsnittet om
+                innehåll som inte
+                är tillgängligt nedan för mer information.</p>
+
+            <h2>Vad kan du göra om du inte kan använda delar av webbplatsen? </h2>
+            <p class="access-p">Om du behöver innehåll från webbplatsen som inte är tillgängligt för dig, men som är
+                undantaget från
+                lagens tillämpningsområde enligt beskrivning nedan, kan du meddela oss.
+
+                Svarstiden är normalt 2 dagar.
+            <h3>Rapportera brister i webbplatsens tillgänglighet</h3>
+            <p>Vi strävar hela tiden efter att förbättra webbplatsens tillgänglighet. Om du upptäcker problem som inte
+                är beskrivna på den här sidan, eller om du anser att vi inte uppfyller lagens krav, kontakta oss i
+                formuläret nedan så att
+                vi får veta att problemet finns. </p>
+            <!--Kontaktformulär-->
+            <form id="acces-form">
+                <h4>Rapportera brister</h4>
+                <label for="fname">Namn <span class="red">*</span></label><br>
+                <input type="text" id="fname" name="fname" required placeholder="Ange ditt namn"><br>
+                <label for="mailadress">Mailadress:<span class="red">*</span></label><br>
+                <input type="text" id="mailadress" name="mailadress"
+                    placeholder="Ange den mailadress du vill bli kontaktad på" required><br><br>
+                <label for="textMessage">Meddelande<span class="red">*</span></label><br>
+                <textarea name="textMessage" id="textMessage" rows="4" cols="70">
+            </textarea>
+                <input type="checkbox" id="checked" name="checked" value="checked" required>
+                <label for="checked"> Alla uppgifter behandlas i enlighet med dataskyddsförordningen. Tänk på att dina
+                    inskickade uppgifter är allmän handling och kan komma att lämnas ut i enlighet
+                    offentlighetsprincipen om inte sekretess gäller enligt offentlighet- och sekretesslagen.
+                    <span class="red">*</span></label><br>
+                <!--Knapparna i formuläret-->
+                <div class="form-buttons">
+                    <button id="reset" type="reset">Rensa <i class="fas fa-times"></i></button>
+                    <button id="send">Skicka <i class="far fa-paper-plane"></i></button>
+                </div>
+            </form>
+            <!--Slut på kontaktformulär-->
+
+
+            <h2>Tillsyn</h2>
+            <p class="access-p">Myndigheten för digital förvaltning har ansvaret för tillsyn över lagen om
+                tillgänglighet till digital
+                offentlig service. Om du inte är nöjd med hur vi hanterar ditt påpekande om bristande webbtillgänglighet
+                eller din begäran om tillgängliggörande av innehåll kan du anmäla till Myndigheten för digital
+                förvaltning. </p>
+            <h2>Teknisk information om webbplatsens tillgänglighet </h2>
+            <p class="access-p">Den här webbplatsen är delvis förenlig med lagen om tillgänglighet till digital
+                offentlig service, på
+                grund av de brister som beskrivs nedan.
+            </p>
+            <h2>Innehåll som inte är tillgängligt: </h2>
+            <p>Det innehåll som beskrivs nedan är på ett eller annat sätt inte helt tillgänglig:
+
+            <ul>
+                <li>När fel upptäcks automatiskt presenteras inte förslag på korrekt inmatning för användaren</li>
+                <li>Det saknas översättning till teckenspråk</li>
+                <li>Delar av sidan saknar möjlighet att ångra klick</li>
+                <li>Aria saknas i vissa delar på webbplatsen</li>
+            </ul>
+
+            <p class="access-p">Vår ambition är att ha åtgärdat alla kända tillgänglighetsproblem senast den 2022-01-16.
+            </p>
+
+            <h2>Hur vi testat webbplatsen</h2>
+
+            <p>Vi har gjort en självskattning (intern testning) av webbplatsen.<br><br>
+
+                Senaste bedömningen gjordes den 2021-01-13.<br><br>
+
+
+
+                Webbplatsen publicerades den 2022-01-13.
+                <br><br>
+
+                Redogörelsen uppdaterades senast den
+                2022-01-13.
+            </p>
+        </section>
+    </main>
+
+
+    <!--Footer-->
+    <footer class="main-footer">
+        <div>
+            <h3>Kontakta oss</h3>
+            <p>Kundtjänst: 0910 73 50 00<br>Mail: emfo2102@student.miun.se<br><br></p>
+            <a href="contact.html">Skicka meddelande direkt på webbplatsen</a>
+        </div>
+        <div>
+            <h3>Länkar</h3>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="mypage.html">Mina sidor</a></li>
+                <li><a href="book.html">Boka färdtjänst</a></li>
+                <li><a href="about.html">Om färdtjänst</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tillgänglighet</h3>
+            <a href="accesibility.html">Tillgänglighetsredogörelse</a>
+        </div>
+        <div class="backtotop"><a href="#logo">Tillbaka till toppen av sidan</a></div>
+    </footer>
+    <footer class="secondFooter"><span>Emma Forslund. emfo2102@student.miun.se</span></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skellefteå kommun färdtjänst">
+    <link rel="stylesheet" href="styles.css">
+    <!--Faviconer-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+    <!--Hämtar hamburger-ikonen-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/95698cec21.js" crossorigin="anonymous"></script>
+    <title>Skellefteå kommun - Färdtjänst</title>
+</head>
+
+<body>
+    <!--Knapp som är gömd där användaren kan hoppa till huvudinnehåll. Syns med tab-->
+    <a class="skip-to-main" href="#main-book">Gå till huvudinnehållet</a>
+    <header>
+        <!--Här startar hamburger-menyn-->
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-wrapper">
+                <!--Logotypen-->
+                <a href="index.html"><img class="logo" id="logo" src="images/logo.svg" alt="logotyp"></a>
+                <!-- Sökruta-->
+                <form role="search">
+                    <div class="search" id="search">
+                        <input type="text" placeholder="Sök" class="search-bar" id="search-desktop" aria-label="Sök">
+                        <button type="submit" class="searchButton" value="search" title="sök">
+                            <i class="fa fa-search"> Sök</i>
+                        </button>
+                    </div>
+                </form>
+
+                <!--Mina sidor-länk(Stylad som knapp)-->
+                <div class="mypage-btn"> <a href="mypage.html" aria-label="mina sidor"><i class="fas fa-user fa-sm"></i>
+                        Mina sidor</a> </div>
+
+
+
+                <!--Hamburger-ikonen. Span-texten syns endast för större skärmar-->
+                <button class="hamburger-icon" id="hamburger-icon" value="menu" aria-label="meny"><i
+                        class="fas fa-bars"></i><span class="hamburger-text">Meny</span></button>
+
+                <!--Länkarna i navigeringen. Gömda by default-->
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a href="mypage.html">Mina sidor</a></li>
+                    <li><a class="active-link" href="book.html">
+                            Boka färdtjänst
+                        </a></li>
+                    <li><a href="about.html">Om färdtjänst</a></li>
+                    <li><a href="contact.html">Kontakta oss</a></li>
+                    <li><a href="accesibility.html">Tillgänglighetsredogörelse</a></li>
+                    <li><a href="index.html"> <i class="fas fa-sign-out-alt"></i> Logga ut</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Här slutar header och main börjar-->
+
+    <main id="main-book">
+        <!--Breadcrumbs-->
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Startsida ></a></li>
+            <li><strong> Boka färdtjänst</strong></li>
+        </ul>
+        <!--Huvudinnehåll-->
+        <section id="container-book">
+            <h1>Boka färdtjänst</h1>
+            <p>Här kan du boka en färdtjänstresa. Fyll i fälten nedan och tryck på “Boka”. Du
+                hittar alla dina resor på <a href="mypage.html">Mina sidor</a>. Du får en bekräftelse via din mailadress
+                när bokningen är
+                klar. <strong>Du kan boka en resa minst en timma innan avfärd.</strong> </p>
+        </section>
+        <section class="booking">
+            <h2>Boka</h2>
+            <!--Formulär för bokning-->
+            <form>
+                <!--Från-->
+                <div class="grey-color">
+                    <div class="booking-flex">
+                        <div><label for="firstname">Jag vill resa från: </label><br>
+                            <input type="text" id="firstname" placeholder="Fyll i startadress"><br><br><br>
+                        </div>
+
+
+
+                        <!--Till-->
+                        <div> <label for="email">Jag vill resa till: </label><br>
+                            <input type="text" id="email" placeholder="Fyll i slutdestination"><br><br>
+                        </div>
+                    </div>
+
+                    <!--Tid och datum-->
+                    <div id="trip-date">
+                        <label for="trip-time" id="date">Välj datum och tid:</label><br>
+                        <input type="datetime-local" id="trip-time" name="meeting-time"><br><br><br>
+                    </div>
+                    <hr>
+
+                    <button type="button" class="trip-home" id="trip-home-btn">Lägg till hemresa <i
+                            class="fas fa-plus-circle"></i></button>
+                    <!--Gömd div. Visas vid klick på knappen ovan-->
+                    <div id="timeHome"><label for="time-home">Välj tid för hemresa:</label><br><br>
+
+                        <input type="time" id="time-home" name="time-home" min="00:00" max="23:59" onchange="added()">
+                        <p id="added"></p>
+                    </div>
+                </div>
+
+
+                <!--Återkommande resa-->
+                <div class="booking-text">
+                    <h3>Återkommande resa?</h3>
+                    <p>En återkommande resa är en resa som återkommer den valda vardagen under antal önskade tillfällen.
+                    </p>
+                </div>
+                <div class="grey-color">
+
+
+                    <!--Hur ofta?-->
+                    <div id="quantity-style">
+                        <label for="quantity">Hur ofta återkommer resan?</label><br><br>
+                    </div>
+
+                    <select name="quantity" id="quantity">
+                        <option value="daily">Återkommer inte</option>
+                        <option value="daily">Dagligen</option>
+                        <option value="weekdays">Varje vardag(måndag till fredag)</option>
+                        <option value="weekly">Varje vecka</option>
+                        <option value="monthly">Varje månad den valda vardagen</option>
+                        <option value="yearly">Varje år den valda vardagen</option>
+                    </select>
+                </div>
+
+
+
+
+                <!--Övrigt om resan-->
+                <h3>Övrigt om resan</h3>
+                <div id="p-center">
+                    <p>Vänligen fyll i fälten för de tillval du vill göra.</p>
+                </div>
+                <div class="grey-color">
+
+
+                    <input type="checkbox" id="rullstol" name="rullstol" value="rullstol">
+                    <label for="rullstol"> Jag behöver rullstolsanpassa min resa</label><br>
+                    <hr><br>
+
+                    <input type="checkbox" id="ledsagare" name="ledsagare" value="ledsagare">
+                    <label for="ledsagare"> Jag kommer att ta med en ledsagare/medresenär</label><br>
+                    <hr><br>
+
+                    <input type="checkbox" id="servicehund" name="servicehund" value="servicehund">
+                    <label for="servicehund"> Jag har med mig ledarhund eller servicehund</label><br>
+                    <hr><br>
+
+                    <input type="checkbox" id="stopp" name="stopp" value="stopp">
+                    <label for="stopp">Jag behöver göra stopp under resan på grund av medicinska skäl</label><br>
+                    <hr><br>
+
+                    <input type="checkbox" id="samaka" name="samaka" value="samaka">
+                    <label for="samaka">Jag kan inte samåka på grund av medicinska skäl</label><br>
+                    <hr><br>
+
+
+                    <h3>Övrig information</h3>
+                    <div id="label-center">
+                        <label for="textMessage">Om du vill tillägga någon övrig information i resan kan du fylla i
+                            fältet
+                            nedan</label>
+                    </div>
+                    <textarea name="textMessage" id="textMessage" rows="4" cols="50">
+                </textarea>
+                </div>
+                <button class="trip-home" id="trip-home" onclick="thankYouFunction()" type="button">Boka</button>
+                <div id="thanks-p"></div>
+
+            </form>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="main-footer">
+        <div>
+            <h3>Kontakta oss</h3>
+            <p>Kundtjänst: 0910 73 50 00<br>Mail: emfo2102@student.miun.se<br><br></p>
+            <a href="contact.html">Skicka meddelande direkt på webbplatsen</a>
+        </div>
+        <div>
+            <h3>Länkar</h3>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="mypage.html">Mina sidor</a></li>
+                <li><a href="book.html">Boka färdtjänst</a></li>
+                <li><a href="about.html">Om färdtjänst</a></li>
+                <li><a href="contact.html">Kontakta oss</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tillgänglighet</h3>
+            <a href="accesibility.html">Tillgänglighetsredogörelse</a>
+        </div>
+        <div class="backtotop"><a href="#logo">Tillbaka till toppen av sidan</a></div>
+    </footer>
+    <footer class="secondFooter"><span>Emma Forslund. emfo2102@student.miun.se</span></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
